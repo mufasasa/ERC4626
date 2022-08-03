@@ -1,0 +1,30 @@
+type Approval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type Deposit @entity {
+  id: ID!
+  caller: Bytes! # address
+  owner: Bytes! # address
+  assets: BigInt! # uint256
+  shares: BigInt! # uint256
+}
+
+type Transfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type Withdraw @entity {
+  id: ID!
+  caller: Bytes! # address
+  receiver: Bytes! # address
+  owner: Bytes! # address
+  assets: BigInt! # uint256
+  shares: BigInt! # uint256
+}
